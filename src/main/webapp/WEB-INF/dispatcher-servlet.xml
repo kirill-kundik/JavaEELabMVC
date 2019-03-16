@@ -14,7 +14,8 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
     <context:component-scan
             base-package="entities,
                           controllers,
-                          services"/>
+                          services
+                          repositories"/>
 
     <tx:annotation-driven/>
 
