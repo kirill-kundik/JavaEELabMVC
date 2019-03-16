@@ -12,12 +12,14 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
     <mvc:annotation-driven/>
     <mvc:resources mapping="/resources/**" location="resources/"/>
     <context:component-scan
-            base-package="entities,
-                          controllers,
+            base-package="entities
+                          controllers
                           services
-                          repositories"/>
+                          repositories
+                          configs"/>
 
     <tx:annotation-driven/>
+    <context:annotation-config/>
 
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
         <property name="driverClassName" value="org.postgresql.Driver"/>
