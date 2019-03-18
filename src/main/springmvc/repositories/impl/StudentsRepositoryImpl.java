@@ -1,7 +1,6 @@
 package repositories.impl;
 
 import entities.Student;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Repository;
 import repositories.StudentsRepository;
 
