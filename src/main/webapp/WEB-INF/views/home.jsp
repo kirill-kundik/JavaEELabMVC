@@ -19,13 +19,5 @@ ${mainText}<br/>
     </c:forEach>
 </c:if>
 
-<c:if test="${showForm eq true}">
-<form action="http://localhost:8080/springmvc_war/" method="post" style="margin-top: 30px">
-    <input type="text" name="pib" placeholder="PIB">
-    <input type="number" name="course" placeholder="Course">
-    <input type="submit" value="submit">
-</form>
-</c:if>
-
 </body>
 </html>

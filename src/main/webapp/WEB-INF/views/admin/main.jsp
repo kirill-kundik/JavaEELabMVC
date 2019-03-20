@@ -15,9 +15,13 @@
 ${mainText}<br/>
 <c:if test="${studentsList ne null}">
     <c:forEach items="${studentsList}" var="student" varStatus="index">
-        ${index.index+1}.) <a href="/students/${student.pib}">${student.pib}</a><br/>
+        ${index.index+1}.) <a href="/springmvc_war/home/${student.studentId}">${student.pib}</a><br/>
     </c:forEach>
 </c:if>
-<a href="/students?new">Add new student</a>
+<form action="http://localhost:8080/springmvc_war/home" method="post" style="margin-top: 30px">
+    <input type="text" name="pib" placeholder="PIB">
+    <input type="number" name="course" placeholder="Course">
+    <input type="submit" value="submit">
+</form>
 </body>
 </html>

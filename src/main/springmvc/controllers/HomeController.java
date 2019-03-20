@@ -23,20 +23,6 @@ public class HomeController {
     public ModelAndView showHomePage() {
         ModelAndView model = new ModelAndView("home");
         model.addObject("mainText", "Students List");
-        model.addObject("showForm", true);
-        model.addObject("studentsList", studentsService.getAllStudents());
-        return model;
-    }
-
-    @PostMapping
-    public ModelAndView createStudent(@RequestParam String pib, @RequestParam int course) {
-        Student student = new Student();
-        student.setPib(pib);
-        student.setCourse(course);
-        studentsService.addStudent(student);
-        ModelAndView model = new ModelAndView("home");
-        model.addObject("mainText", "Student Added");
-        model.addObject("showForm", true);
         model.addObject("studentsList", studentsService.getAllStudents());
         return model;
     }

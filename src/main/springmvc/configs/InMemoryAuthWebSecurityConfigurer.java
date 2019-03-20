@@ -31,6 +31,7 @@ public class InMemoryAuthWebSecurityConfigurer
                 .antMatchers("/home**")
                 .permitAll()
                 .and()
+                .csrf().disable()
                 .httpBasic();
     }
 
